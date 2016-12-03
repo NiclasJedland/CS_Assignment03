@@ -29,10 +29,10 @@ namespace Assignment03
 			return DaysLeft += change;
 		}
 
-		public void GameOver(string winner)
+		public void GameOver(string text)
 		{
 			//TODO: Gameover
-			MessageBox.Show(winner);
+			MessageBox.Show(text);
 		}
 
 		public void StartLocation()
@@ -46,8 +46,7 @@ namespace Assignment03
 			Map.GameMap[CurrentXLocation, CurrentYLocation].Searched = true;
 			Map.GameMap[CurrentXLocation, CurrentYLocation].Item.Add(Inventory.inventory.SmallPaper);
 			Map.GameMap[CurrentXLocation, CurrentYLocation].Item.Add(Inventory.inventory.LargeRation);
-
-			Map.GameMap[CurrentXLocation, CurrentYLocation].Item.Add(Inventory.inventory.LargeMap);//TODO: remove this
+			//Map.GameMap[CurrentXLocation, CurrentYLocation].Item.Add(Inventory.inventory.LargeMap);//TODO: remove this
 		}
 
 		public void GetSurrounding()
@@ -165,8 +164,6 @@ namespace Assignment03
 			{
 				DaysLeftText(player.CurrentLocationTile.SearchCost, lblDaysLeft);
 				Map.GameMap[player.CurrentXLocation, player.CurrentYLocation].Searched = true;
-
-				//TODO: You found or didnt find anything
 			}
 		}
 
